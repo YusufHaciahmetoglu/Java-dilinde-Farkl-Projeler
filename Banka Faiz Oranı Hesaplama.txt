@@ -1,0 +1,21 @@
+package javaapplication2;
+import java.util.Scanner;
+public class JavaApplication2 {
+    public static void main(String[] args) {
+	Scanner scanner=new Scanner(System.in);
+        System.out.println("Bankamıza Hoşgeldiniz.. Faiz Oranı %6");
+        int anapara,vade;
+        System.out.println("Yatırmak İstediğiniz Tutarı Giriniz");
+        anapara=scanner.nextInt();
+        System.out.println("Paranızı Kaç Ay Vadeli Yatırmak İstiyorsunuz?");
+        vade=scanner.nextInt();
+        double toplampara=anapara;
+        double faizOrani=0.06;
+        for(int i=1; i<=vade; i++){
+        toplampara=(toplampara*faizOrani)+toplampara;
+            
+        }
+       System.out.println("İşlem Sonunda Toplampara"+toplampara);
+    }
+    
+}
